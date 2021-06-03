@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 async function connect() {
     try {
-        await mongoose.connect('mongodb://localhost:27017/IOT', {
+        await mongoose.connect('mongodb+srv://phucsy:123@login.ezfrs.mongodb.net/login?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false,
