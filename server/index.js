@@ -3,7 +3,6 @@ const express = require("express");
 const app = express();
 const socket = require("socket.io");
 const cors = require("cors");
-
 const path = require('path')
 const authRouter = require("./routes/auth");
 const postRouter = require("./routes/post");
