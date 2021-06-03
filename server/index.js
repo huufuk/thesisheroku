@@ -8,7 +8,6 @@ const authRouter = require("./routes/auth");
 const postRouter = require("./routes/post");
 const mqttRouter = require("./routes/mqtt");
 
-
 const PORT = process.env.PORT || 5000;
 const server = app.listen(PORT);
 const db = require("./config/db");

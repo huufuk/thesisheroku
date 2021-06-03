@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/tranvancu185/WaterSystem#readme",
   "dependencies": {
+    "chalk": "^4.1.1",
+    "each-async": "^2.0.0",
+    "indent-string": "^5.0.0",
     "ncp": "^2.0.0"
   }
 }
