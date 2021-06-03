@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const socket = require("socket.io");
 const cors = require("cors");
-const chalk = require("chalk");
+
 const path = require('path')
 const authRouter = require("./routes/auth");
 const postRouter = require("./routes/post");
@@ -120,9 +120,9 @@ io.on("connection", (socket) => {
     client.on("backoff", (retry, delay) => {
       console.log("Retrying to connect to ", endpointUrl, " attempt ", retry);
     });
-    console.log(" connecting to ", chalk.cyan(endpointUrl));
+    console.log(" connecting to ", endpointUrl);
     await client.connect(endpointUrl);
-    console.log(" connected to ", chalk.cyan(endpointUrl));
+    console.log(" connected to ", endpointUrl);
 
     const session = await client.createSession();
     console.log(" session created");
@@ -893,7 +893,7 @@ io.on("connection", (socket) => {
       process.exit(0);
     });
   } catch (err) {
-    console.log(chalk.bgRed.white("Error" + err.message));
+    console.log("Error" + err.message);
     console.log(err);
     process.exit(-1);
   }
